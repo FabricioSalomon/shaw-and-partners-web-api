@@ -1,7 +1,7 @@
-import { UsersRespository } from "../repositories/UsersRespository";
+import { UsersRepository } from "../repositories/UsersRepository";
 
 export class UsersService {
-  constructor(private usersRepository: UsersRespository) {}
+  constructor(private usersRepository: UsersRepository) {}
 
   async getUsers(id = 0) {
     const users = await this.usersRepository.getUsers(id);
