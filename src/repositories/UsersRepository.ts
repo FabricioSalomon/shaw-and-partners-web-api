@@ -1,4 +1,4 @@
-import { UserRepository } from "../model/Repositories";
+import { UserRepository } from "../model/UserRepositories";
 import { User, UserDetail } from "../model/Users";
 import { api } from "../services/api";
 import { IUsersRepository } from "./IUsersRepository";
