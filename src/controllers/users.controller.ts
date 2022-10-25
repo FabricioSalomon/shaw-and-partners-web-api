@@ -5,7 +5,7 @@ export class UsersController {
   constructor(private usersService: UsersService) {}
 
   async getUsers(request: Request, response: Response) {
-    const id = request.query.id ? Number(request.query.id) : 0;
+    const id = request.query.since ? Number(request.query.since) : 0;
     const users = await this.usersService.getUsers(id);
 
     if (typeof users === "string") {
@@ -15,5 +15,31 @@ export class UsersController {
     }
 
     return response.status(200).json({ data: users });
+  }
+
+  async getUserDetails(request: Request, response: Response) {
+    const username = request.params.username;
+    const user = await this.usersService.getUserDetails(username);
+
+    if (typeof user === "string") {
+      return response
+        .status(400)
+        .json({ error: true, message: "Something went wrong" });
+    }
+
+    return response.status(200).json({ data: user });
+  }
+
+  async getUserRepositories(request: Request, response: Response) {
+    const username = request.params.username;
+    const user = await this.usersService.getUserRespositories(username);
+
+    if (typeof user === "string") {
+      return response
+        .status(400)
+        .json({ error: true, message: "Something went wrong" });
+    }
+
+    return response.status(200).json({ data: user });
   }
 }

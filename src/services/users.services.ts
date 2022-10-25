@@ -13,4 +13,24 @@ export class UsersService {
 
     return users;
   }
+
+  async getUserDetails(username: string) {
+    const user = await this.usersRepository.findOne(username);
+
+    if (!user) {
+      return new Error("Error getting user details.");
+    }
+
+    return user;
+  }
+
+  async getUserRespositories(username: string) {
+    const user = await this.usersRepository.findRepositories(username);
+
+    if (!user) {
+      return new Error("Error getting user repositories.");
+    }
+
+    return user;
+  }
 }
