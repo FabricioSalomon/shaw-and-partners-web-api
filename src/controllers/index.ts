@@ -1,7 +1,7 @@
-import { UsersRespository } from "../repositories/UsersRespository";
+import { UsersRepository } from "../repositories/UsersRepository";
 import { UsersService } from "../services/users.services";
 import { UsersController } from "./users.controller";
 
-const usersRespository = new UsersRespository();
-const usersService = new UsersService(usersRespository);
+const usersRepository = new UsersRepository();
+const usersService = new UsersService(usersRepository);
 export const usersController = new UsersController(usersService);

@@ -1,0 +1,42 @@
+[
+  {
+    "login": "john",
+    "id": 1,
+    "node_id": "MDQ6VXNlheQ3",
+    "avatar_url": "https://avatars.githubusercontent.com/u/1?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/john",
+    "html_url": "https://github.com/john",
+    "followers_url": "https://api.github.com/users/john/followers",
+    "following_url": "https://api.github.com/users/john/following{/other_user}",
+    "gists_url": "https://api.github.com/users/john/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/john/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/john/subscriptions",
+    "organizations_url": "https://api.github.com/users/john/orgs",
+    "repos_url": "https://api.github.com/users/john/repos",
+    "events_url": "https://api.github.com/users/john/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/john/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  {
+    "login": "doe",
+    "id": 2,
+    "node_id": "MDQ6VXNlcjQ4",
+    "avatar_url": "https://avatars.githubusercontent.com/u/2?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/doe",
+    "html_url": "https://github.com/doe",
+    "followers_url": "https://api.github.com/users/doe/followers",
+    "following_url": "https://api.github.com/users/doe/following{/other_user}",
+    "gists_url": "https://api.github.com/users/doe/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/doe/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/doe/subscriptions",
+    "organizations_url": "https://api.github.com/users/doe/orgs",
+    "repos_url": "https://api.github.com/users/doe/repos",
+    "events_url": "https://api.github.com/users/doe/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/doe/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+]

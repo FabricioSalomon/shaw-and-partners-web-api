@@ -1,9 +1,9 @@
 import { User } from "../model/Users";
 import { api } from "../services/api";
-import { IUsersRespository } from "./IUsersRepository";
+import { IUsersRepository } from "./IUsersRepository";
 
-export class UsersRespository implements IUsersRespository {
-  async getUsers(id: number) {
+export class UsersRepository implements IUsersRepository {
+  async findAll(id = 0) {
     const users = await api.get<User[]>(`/users?since=${id}`);
     return users.data;
   }
