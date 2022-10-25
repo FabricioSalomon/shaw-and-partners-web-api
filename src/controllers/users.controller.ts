@@ -8,6 +8,12 @@ export class UsersController {
     const id = request.query.id ? Number(request.query.id) : 0;
     const users = await this.usersService.getUsers(id);
 
+    if (typeof users === "string") {
+      return response
+        .status(400)
+        .json({ error: true, message: "Something went wrong" });
+    }
+
     return response.status(200).json({ data: users });
   }
 }
