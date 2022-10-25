@@ -32,14 +32,14 @@ export class UsersController {
 
   async getUserRepositories(request: Request, response: Response) {
     const username = request.params.username;
-    const user = await this.usersService.getUserRespositories(username);
+    const userRepos = await this.usersService.getUserRepositories(username);
 
-    if (typeof user === "string") {
+    if (typeof userRepos === "string") {
       return response
         .status(400)
         .json({ error: true, message: "Something went wrong" });
     }
 
-    return response.status(200).json({ data: user });
+    return response.status(200).json({ data: userRepos });
   }
 }

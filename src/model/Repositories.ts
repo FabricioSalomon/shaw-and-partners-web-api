@@ -1,6 +1,6 @@
 import { User } from "./Users";
 
-export interface Respository {
+export interface UserRepository {
   id: number;
   node_id: string;
   name: string;

@@ -17,20 +17,20 @@ export class UsersService {
   async getUserDetails(username: string) {
     const user = await this.usersRepository.findOne(username);
 
-    if (!user) {
+    if (!user?.id) {
       return new Error("Error getting user details.");
     }
 
     return user;
   }
 
-  async getUserRespositories(username: string) {
-    const user = await this.usersRepository.findRepositories(username);
+  async getUserRepositories(username: string) {
+    const userRepos = await this.usersRepository.findRepositories(username);
 
-    if (!user) {
+    if (!userRepos || userRepos.length === 0) {
       return new Error("Error getting user repositories.");
     }
 
-    return user;
+    return userRepos;
   }
 }

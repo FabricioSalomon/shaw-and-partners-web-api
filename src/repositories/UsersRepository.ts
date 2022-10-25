@@ -1,4 +1,4 @@
-import { Respository } from "../model/Respositories";
+import { UserRepository } from "../model/Repositories";
 import { User, UserDetail } from "../model/Users";
 import { api } from "../services/api";
 import { IUsersRepository } from "./IUsersRepository";
@@ -15,7 +15,7 @@ export class UsersRepository implements IUsersRepository {
   }
 
   async findRepositories(username: string) {
-    const user = await api.get<Respository>(`/users/${username}/repos`);
+    const user = await api.get<UserRepository[]>(`/users/${username}/repos`);
     return user.data;
   }
 }
